@@ -1,5 +1,6 @@
  
 export default {
+  
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   // ssr: false,
   mode: 'spa',
@@ -8,7 +9,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'course',
+    title: 'Toko-Midtrans',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -85,16 +86,16 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    // '@nuxtjs/proxy',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    '@nuxtjs/style-resources',
-    '@nuxtjs/dotenv',
+    // '@nuxtjs/style-resources',
     '@nuxtjs/auth-next',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: 'http://localhost:3001/api/v1',
+    baseURL: 'https://serverbeli.apitoong.com/api/v1',
     
   },
   auth: {
@@ -104,9 +105,10 @@ export default {
           login: { url: '/user/login', method: 'post' ,propertyName:'token'},
           logout: false,
           user: { url: '/user/data', method: 'get',propertyName: 'user' }
-        }
-      }
-    }
+         
+        },
+      },
+    },
   },
   router: {
     middleware: ['customAuth']
