@@ -49,8 +49,11 @@
         </section>
 </template>
 <script>
-import Navbar from '~/components/Navbar.vue';
+ 
+ 
 export default{
+    // auth: false,
+    autoFetch:false,
     data() {
         return {
             login: {
@@ -59,18 +62,17 @@ export default{
             }
         };
     },
+ 
     methods: {
         async getLogin() {
             try {
                 let response = await this.$auth.loginWith("local", { data: this.login });
-                
-            }
-            catch (error) {
-                console.log(error.message);
+            } catch (error) {
+                    console.log(error.message);
             }
         }
     },
-    components: { Navbar }
+    // components: { Navbar }
 }
 </script>
  

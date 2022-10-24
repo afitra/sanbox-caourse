@@ -58,7 +58,7 @@ export default{
     return{
         form:{
             username:"bubububu",
-            email:"bu@gmail.co",
+            email:"bubu@mail.co",
             password:"1",
             password2:"1"
         }

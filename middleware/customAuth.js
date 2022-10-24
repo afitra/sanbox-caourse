@@ -14,6 +14,7 @@ export default async function({redirect, store , route}) {
   }
   let flag = validate[route.name] || false
   if(isAuthenticated ==false && flag){
+   
     return  redirect({name:"Login"})
   }
    

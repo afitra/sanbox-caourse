@@ -33,11 +33,10 @@ import Footer from "../components/Footer.vue";
 import CountDown from "../components/CountDown.vue";
 import NewItem from "../components/NewItem.vue";
 export default {
-    name: "IndexPage",
+    // name: "IndexPage",
     components: { Category, Banner, Feature, Promo, Brand, Testimonial, NewsPart, IntroPart, Footer, CountDown, NewItem },
     async asyncData({ $axios }) {
- 
-      
+  
     const {products} = await $axios.$get('/user/product');
       // this.products= products
   
